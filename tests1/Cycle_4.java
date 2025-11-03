@@ -8,7 +8,6 @@ public class Cycle_4 {
     public static void main(String[] args) {
         System.out.println(pow(2, 5));      //32
     }
-
     public static int pow(int x, int y) {
         int result = 1;
         for (int i = 0; i < y; i++) {
@@ -16,5 +15,4 @@ public class Cycle_4 {
         }
         return result;
     }
-
 }
