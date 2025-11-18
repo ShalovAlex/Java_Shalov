@@ -7,6 +7,6 @@ class Department {
     }
     @Override
     public String toString() {
-        return "Department " + name + ", boss is " + boss.name ;
+        return "Department " + name + ", boss is " + boss.name;
     }
 }
