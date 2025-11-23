@@ -17,13 +17,13 @@
 public class OOP_5_1 {
     public static void main(String[] args) {
         // Создание экземпляров дробей
-        Fraction f1 = new Fraction(1, 3);   // одна треть
-        Fraction f2 = new Fraction(2, 5);   // две пятых
-        Fraction f3 = new Fraction(7, 8);   // семь восьмых
+        Fraction1 f1 = new Fraction1(1, 3);   // одна треть
+        Fraction1 f2 = new Fraction1(2, 5);   // две пятых
+        Fraction1 f3 = new Fraction1(7, 8);   // семь восьмых
         System.out.println(f1 + " " + f2 + " " + f3);
-        Fraction result = f1.sum(f2).sum(f3);
+        Fraction1 result = f1.sum(f2).sum(f3);
         System.out.println(result);
-        Fraction result1 = f1.sum(f2).sum(f3).minus(5);
+        Fraction1 result1 = f1.sum(f2).sum(f3).minus(5);
         System.out.println(result1);
     }
 }

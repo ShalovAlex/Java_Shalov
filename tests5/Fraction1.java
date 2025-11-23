@@ -1,15 +1,15 @@
-public class Fraction {
+public class Fraction1 {
     // Приватные final поля - состояние не может изменяться
     private final int numerator;        //числитель (numerator): целое число
     private final int denominator;      //знаменатель (denominator): целое число
 
     // Конструктор только с числителем (знаменатель = 1)
-    public Fraction(int numerator) {
+    public Fraction1(int numerator) {
         this(numerator, 1);
     }
 
     // Конструктор с числителем и знаменателем
-    public Fraction(int numerator, int denominator) {
+    public Fraction1(int numerator, int denominator) {
         if (denominator < 0) {
             throw new IllegalArgumentException("Знаменатель не может быть отрицательным");
         }
@@ -33,30 +33,30 @@ public class Fraction {
         return a;
     }
     // Сокращение дроби
-    private Fraction reduce() {
+    private Fraction1 reduce() {
         int gcd = gcd(numerator, denominator);
-        return new Fraction(numerator / gcd, denominator / gcd);
+        return new Fraction1(numerator / gcd, denominator / gcd);
     }
     // Сложение с другой дробью (возвращает новую дробь)
-    public Fraction sum(Fraction other) {
+    public Fraction1 sum(Fraction1 other) {
         int newNumerator = this.numerator * other.denominator + other.numerator * this.denominator;
         int newDenominator = this.denominator * other.denominator;
-        return new Fraction(newNumerator, newDenominator).reduce();
+        return new Fraction1(newNumerator, newDenominator).reduce();
     }
     // Сложение с целым числом (возвращает новую дробь)
-    public Fraction sum(int number) {
-        return sum(new Fraction(number));
+    public Fraction1 sum(int number) {
+        return sum(new Fraction1(number));
     }
 
     // Вычитание другой дроби
-    public Fraction minus(Fraction other) {
+    public Fraction1 minus(Fraction1 other) {
         int newNumerator = this.numerator * other.denominator - other.numerator * this.denominator;
         int newDenominator = this.denominator * other.denominator;
-        return new Fraction(newNumerator, newDenominator).reduce();
+        return new Fraction1(newNumerator, newDenominator).reduce();
     }
 
     // Вычитание целого числа
-    public Fraction minus(int number) {
-        return minus(new Fraction(number));
+    public Fraction1 minus(int number) {
+        return minus(new Fraction1(number));
     }
 }
