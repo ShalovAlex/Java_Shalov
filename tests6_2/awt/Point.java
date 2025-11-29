@@ -1,4 +1,4 @@
-package ru.courses.geometry;
+package awt;
 
 public class Point {
     private final double x;
