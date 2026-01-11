@@ -22,8 +22,14 @@ public class Main {
                 new Point(5, 5),
                 new Point(5, 0)
         );
+        StringMeasurableAdapter stringAdapter = new StringMeasurableAdapter("Hello World");
 
-        double totalLength = calculateTotalLength(line1, line2);
+        double totalLength = calculateTotalLength(line1, line2, stringAdapter);
         System.out.println("Суммарная длина: " + totalLength);
+
+        double stringLength = calculateTotalLength(
+                new StringMeasurableAdapter("Test String")
+        );
+        System.out.println("Длина строки: " + stringLength);
     }
 }
